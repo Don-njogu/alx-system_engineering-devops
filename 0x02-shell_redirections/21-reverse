@@ -1,2 +1,2 @@
 #!/bin/bash
-read user_input; reversed_input=`echo $user_input | rev`
+read user_input reversed_input=`echo $user_input | rev`
