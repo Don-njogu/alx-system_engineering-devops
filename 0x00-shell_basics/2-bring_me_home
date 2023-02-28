@@ -1,2 +1,2 @@
 #!/bin/bash
-cd $(awk -F: -v u=$USER '{if ($1 == u) print $6}' /etc/passwd)
+cd $(getent passwd $(whoami) | cut -d: -f6)
