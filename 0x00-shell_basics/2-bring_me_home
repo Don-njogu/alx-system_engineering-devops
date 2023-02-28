@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
-cd $(eval echo ~)
-=======
-cd ~
->>>>>>> 097d1b0e653fd327c8f670920a8305e951e541b8
+cd $(awk -F: -v u=$USER '{if ($1 == u) print $6}' /etc/passwd)
